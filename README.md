@@ -15,7 +15,7 @@
 
   ### 언어 및 빌드
  Adnroid Studio에서 Java, Kotlin언어를 사용합니다.
-  [JetBrains에서 GitHub Copilot 플러그인을 설치합니다.]https://docs.github.com/en/enterprise-cloud@latest/copilot/managing-copilot/configure-personal-settings/installing-the-github-copilot-extension-in-your-environment?tool=jetbrains)
+  [JetBrains에서 GitHub Copilot 플러그인을 설치합니다.](https://docs.github.com/en/enterprise-cloud@latest/copilot/managing-copilot/configure-personal-settings/installing-the-github-copilot-extension-in-your-environment?tool=jetbrains)
 
 ## 설명: GitHub Copilot 미리보기
  - GitHub Copilot의 기본적인 내용에 대해 자료를 통해 설명 드립니다. 
