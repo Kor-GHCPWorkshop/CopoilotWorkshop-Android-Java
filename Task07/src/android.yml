@@ -1,0 +1,104 @@
+name: Android CI/CD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:  # 수동 실행 옵션
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: 자바 11 설정
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+    
+    - name: Gradle 권한 부여
+      run: chmod +x ./gradlew
+    
+    - name: 구글 서비스 설정
+      run: |
+        echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > app/google-services.json
+      
+    - name: Gradle로 빌드
+      run: ./gradlew build
+    
+    - name: 단위 테스트 실행
+      run: ./gradlew test
+    
+    - name: 테스트 리포트 업로드
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-reports
+        path: app/build/reports/tests/
+    
+    - name: APK 생성
+      run: ./gradlew assembleDebug
+    
+    - name: APK 파일 업로드
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
+    
+    - name: Firebase 테스트 랩 실행
+      uses: asadmansr/Firebase-Test-Lab-Action@v1.0
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      with:
+        arg-spec: 'tests/android-test-lab.yml:basic'
+      env:
+        SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+  # 릴리스 작업 (태그 생성시에만 실행)
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: 자바 11 설정
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    
+    - name: Gradle 권한 부여
+      run: chmod +x ./gradlew
+    
+    - name: 구글 서비스 설정
+      run: |
+        echo "${{ secrets.GOOGLE_SERVICES_JSON }}" > app/google-services.json
+    
+    - name: 릴리스 APK 빌드
+      run: ./gradlew assembleRelease
+    
+    - name: 서명 키 설정
+      run: |
+        echo "${{ secrets.SIGNING_KEY }}" > release.jks.base64
+        base64 -d release.jks.base64 > app/release.jks
+    
+    - name: APK 서명
+      run: |
+        ./gradlew signReleaseBundle \
+          -Pandroid.injected.signing.store.file=release.jks \
+          -Pandroid.injected.signing.store.password=${{ secrets.STORE_PASSWORD }} \
+          -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
+          -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
+    
+    - name: GitHub 릴리스 생성
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          app/build/outputs/apk/release/app-release.apk
+          app/build/outputs/bundle/release/app-release.aab
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
