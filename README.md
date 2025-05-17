@@ -14,7 +14,7 @@
 - Android Studio 및 GitHub Copilot 플러그인은 **최신 버전으로 업데이트 되어 있어야 합니다.**
 
   ### 언어 및 빌드
- Adnroid Studio에서 Java, Kotlin언어를 사용합니다.
+ Adnroid Studio에서 Java언어를 사용합니다.
   [JetBrains에서 GitHub Copilot 플러그인을 설치합니다.](https://docs.github.com/en/enterprise-cloud@latest/copilot/managing-copilot/configure-personal-settings/installing-the-github-copilot-extension-in-your-environment?tool=jetbrains)
 
 ## 설명: GitHub Copilot 미리보기
@@ -22,8 +22,7 @@
   - [GitHub Copilot 사용 베스트 프랙티스](https://docs.github.com/ko/enterprise-cloud@latest/copilot/using-github-copilot/best-practices-for-using-github-copilot)
   - [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview)
   - [초보자를 위한 GitHub Copilot의 핵심기능소개](https://github.blog/ai-and-ml/github-copilot/github-for-beginners-essential-features-of-github-copilot/)
-  - [GitHub Copilot in VS Code Cheat Sheet](https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features#:~:text=Define%20shared%20instructions%20for%20code%20generation%20in%20a,common%20instructions%20supplement%20your%20own%20personal%20code-generation%20instructions.)
-
+  
 ## [Task 1](/Task01/README.md): 간단한 함수 및 테스트 코드 제안 받기 (코드완성)
  - GitHub Copilot를 활용하여 간단한 함수와 테스트 코드를 제안받는 실습입니다. 이를 통해 기본적인 Copilot의 기능을 활용하는 방법을 익힙니다. 
  - GitHub Copilot Log를 확인하여, 오픈소스와 매치되는 코드인 경우 레퍼런스 정보를 확인합니다. 
@@ -46,7 +45,7 @@
  - [IDE에서 GitHub Copilot 사용 팁, 트릭과 모범 사례](https://github.blog/developer-skills/github/how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/)
  - [프롬프트엔지니어링과 LMM에 대한 개발자 가이드](https://github.blog/ai-and-ml/generative-ai/prompt-engineering-guide-generative-ai-llms/)
  - [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot//?WT.mc_id=academic-113596-abartolo)
-- [GitHub Copilot에게 더 좋은 프롬프트를 작성하기 위한 예제와 모범사례](https://github.blog/developer-skills/github/how-to-write-better-prompts-for-github-copilot/)
+ - [GitHub Copilot에게 더 좋은 프롬프트를 작성하기 위한 예제와 모범사례](https://github.blog/developer-skills/github/how-to-write-better-prompts-for-github-copilot/)
 
 
 ## [Task 4](/Task04/README.md): 영어 단어장 앱 만들기 (Part 2) (Copilot Agent 사용)
