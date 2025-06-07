@@ -56,7 +56,7 @@
   <img src="img/05.png" width="200">
   <img src="img/06.png" width="500">
 
-- Copilot Chat창에서 '+' 버튼을 눌러, 위 생성된 `project.txt` 텍스트 파일을 추가하고, 이 프로젝트를 구성하기 위한 절차를 제안해 달라고 요청 해봅니다. <br>
+- Copilot Chat창에서 '+' 버튼을 눌러, 위 생성된 `appDesign.md` 텍스트 파일을 추가하고, 이 프로젝트를 구성하기 위한 절차를 제안해 달라고 요청 해봅니다. <br>
   <img src="img/06-1.png" width="400">
   <img src="img/06-2.png" width="400">
 
@@ -66,6 +66,13 @@
   <img src="img/06-5.png" width="400"> <br>
   <img src="img/06-6.png" width="400"> <br>
   <img src="img/06-7.png" width="400"> <br>
+
+- `appDesign.md` 파일을 바탕으로 UML 다이어 그램을 작성해 달라고 요청해 봅니다. <br>
+  <img src="img/06-8.png" width="400"> <br>
+  <img src="img/06-9.png" width="400"> <br>
+
+  - 생성된 내용을 새로운운 puml 파일로 저장하고 확인합니다. <br>
+  <img src="img/06-10.png" width="700"> <br>
 
 ## Step 3: 의존성 설정 
 

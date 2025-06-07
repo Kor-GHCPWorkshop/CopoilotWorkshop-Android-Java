@@ -26,7 +26,7 @@
 ## [Task 1](/Task01/README.md): 간단한 함수 및 테스트 코드 제안 받기 (코드완성)
  - GitHub Copilot를 활용하여 간단한 함수와 테스트 코드를 제안받는 실습입니다. 이를 통해 기본적인 Copilot의 기능을 활용하는 방법을 익힙니다. 
  - GitHub Copilot Log를 확인하여, 오픈소스와 매치되는 코드인 경우 레퍼런스 정보를 확인합니다. 
- - VS Code의 Copilot 메뉴에 관한 기본적인 설정들을 변경해 봅니다. 
+ - Android Studio의 Copilot 메뉴에 관한 기본적인 설정들을 변경해 봅니다. 
 
 ## [Task 2](/Task02/README.md): 가위, 바위, 보 게임 만들기 (Copilot Chat사용)
  - GitHub Copilot과 함께 가위, 바위, 보 게임을 만들어 봅니다.
@@ -63,7 +63,11 @@
  - GitHub Copilot Chat을 활용해 문제점을 찾고, 해결 방법을 제안 받습니다..
 
 ## [Task 7](/Task07/README.md): CI/CD 파이프라인 실습
- - GitHub Copilot을 사용해 GitHub Actions의 워크 플로우 생성을을 실습하는 예제입니다
+ - GitHub Copilot을 사용해 GitHub Actions의 워크 플로우 생성을을 실습하는 예제입니다.
+
+## [Task 8](/Task08/README.md): MCP (Model Context Protocol) 활용 실습
+ - Android Studio에서 Model Context Protocol 서버를 설정하고, 활용해 봅니다.
+   
 
 
 
