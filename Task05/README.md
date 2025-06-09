@@ -19,16 +19,16 @@
 	필요한 의존성(ViewModel, NavController 등)은 Mockito로 모킹해줘.
   ```
 
-  <img src="img/01.png" width="400"> <br>
+  <img src="img/01.png" width="600"> <br>
 
   - 제안된 내용을 확인하고, 'Accept All' 버튼을 눌러 제안된 내용을 유지합니다. <br>
 
-  <img src="img/02.png" width="400"> <br>
+  <img src="img/02.png" width="600"> <br>
   <img src="img/03.png" width="600"> <br>
   - 테스트를 실행하여 결과를 확인하고 발생된 에러 수정을 위해 `/fix`를 통해 Copilot에 문의 합니다. <br>
-  <img src="img/04.png" width="400"> <br>
-  <img src="img/05.png" width="400"> <br>
-  <img src="img/06.png" width="400"> <br>
+  <img src="img/04.png" width="600"> <br>
+  <img src="img/05.png" width="600"> <br>
+  <img src="img/06.png" width="600"> <br>
 
  <img src="img/07.png" width="500"> <br>
   
@@ -53,9 +53,9 @@ WordAddFragment 클래스에 대한 AndroidX 계측 테스트를 작성해줘줘
   <img src="img/08.png" width="600"> <br>
 
 - 테스트를 실행하여 결과를 확인하고 발생된 에러 수정을 위해 @project, /fix를 활용해해 Copilot에 문의 합니다. <br>
-  <img src="img/11.png" width="400"> <br>
-  <img src="img/12.png" width="400"> <br>
-  <img src="img/13.png" width="500"> <br>
+  <img src="img/11.png" width="600"> <br>
+  <img src="img/12.png" width="600"> <br>
+  <img src="img/13.png" width="600"> <br>
 
 
 ## Step 3: Git commit 메세지 자동 생성

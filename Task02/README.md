@@ -18,16 +18,14 @@
    <img src="img/02.png" alt="image" width="800"/><br>
 
 - 게임을 실행하고, 게임 결과를 출력 받아 봅니다.<br>
-   <img src="img/03.png" alt="image" width="300"/><br>
+   <img src="img/03.png" alt="image" width="500"/><br>
    <img src="img/04.png" alt="image" width="500"/><br>
 
 ## Step 2 : Lizard, Spock 추가하기
 - 만들어진 게임에 추가로 Lizard, Spock의 로직을 Copilot을 활용하여 추가합니다.<br>
    <img src="img/image.png" width="600"><br>
+   
 - `choices` 리스트에 Lizard와 Spock을 추가합니다.<br>
-    <img src="img/03.png" alt="image" width="400"/><br>
-
-- Copilot Chat에 위 그림파일을 복사하여 Copilot Chat에 붙여넣기 합니다.<br>
     <img src="img/05.png" alt="image" width="400"/><br>
 
 - 위 image그림 파일을 다운로드하고, Resource Manager를 통해 파일을 import 합니다.
